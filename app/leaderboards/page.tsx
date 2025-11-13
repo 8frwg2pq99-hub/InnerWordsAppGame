@@ -2,11 +2,8 @@
 
 import dynamic from "next/dynamic";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-
-// Load the real leaderboard page on the client only.
-// This avoids running Convex hooks during the Vercel build.
+// Client-only wrapper around the real leaderboard component.
+// No `revalidate` export here, so Next can't get confused at build time.
 const LeaderboardsClient = dynamic(
   () => import("../../components/leaderboard-page-content"),
   {
