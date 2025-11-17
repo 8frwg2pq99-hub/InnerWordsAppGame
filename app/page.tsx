@@ -1,3 +1,6 @@
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 export default function HomePage() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-black text-white">
@@ -6,10 +9,11 @@ export default function HomePage() {
           InnerWords
         </h1>
         <p className="text-lg text-gray-300">
-          Daily word-weaving. Build words from hidden sequences and chase high scores.
+          Daily word-weaving is coming soon.
         </p>
         <p className="text-sm text-gray-400">
-          The game is getting ready behind the scenes. Check back very soon for the full launch.
+          If you can see this page, the deploy worked – game UI will be plugged
+          back in next.
         </p>
       </div>
     </main>
